@@ -1,9 +1,8 @@
 import "./App.css";
-import Logic1 from "./logics/Squre";
-import Main from "./pages";
+import MainRoutes from "./routes";
 
 function App() {
-  return <Main />;
+  return <MainRoutes />;
 }
 
 export default App;

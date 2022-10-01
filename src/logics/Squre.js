@@ -1,9 +1,11 @@
+import { CopyBlock, dracula } from "react-code-blocks";
+import "./index.css";
 // ****
 // ****
 // ****
 // ****
 
-function Squre(props) {
+function Squre() {
   const logicfun = () => {
     let numberSquare = 5;
     let stringSquare = "";
@@ -16,27 +18,29 @@ function Squre(props) {
     return stringSquare;
   };
   return (
-    <div style={{}}>
-      <p style={{ whiteSpace: "pre-wrap", textAlign: "center" }}>
-        {logicfun()}
-      </p>
-
-      <p style={{ whiteSpace: "pre-wrap" }}>
-        {`
-          const function = () => { 
-
-            let numberSquare = 5;
-            let stringSquare = "";
-            for (let i = 1; i <= numberSquare; i++) {
-              for (let j = 1; j <= numberSquare; j++) {
-                stringSquare += "*";
-              }
-              stringSquare += "/n";
+    <div className="codemain">
+      <h3>Logic</h3>
+      <p className="codemaintext">{logicfun()}</p>
+      <div>
+        <CopyBlock
+          language={"jsx"}
+          text={`
+          let numberSquare = 5;
+          let stringSquare = "";
+          for (let i = 1; i <= numberSquare; i++) {
+            for (let j = 1; j <= numberSquare; j++) {
+              stringSquare += "*";
             }
-            return stringSquare;
-
-          };`}
-      </p>
+            stringSquare += "/n";
+          }
+          return stringSquare;`}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
+        <br />
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .main {
   align-items: flex-start;
   margin: 50px;
-  border: 1px dotted red;
+  border: 1px dotted rgb(235, 222, 222);
   min-height: 80vh;
 }
 .header{
@@ -24,5 +24,10 @@
 }
  a{
   text-decoration:none;
+}
+.notfoundheader{
+  text-align: center;
+  color:#2647a3;
+  cursor:pointer;
 }
 

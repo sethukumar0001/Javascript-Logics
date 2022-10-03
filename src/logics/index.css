@@ -1,5 +1,8 @@
 .codemain{
-    margin: 40px;
+    margin: 7vh;
+    width: 80vh;
+    height: auto;
+
 }
 .codemaintext{
     white-space: pre-wrap

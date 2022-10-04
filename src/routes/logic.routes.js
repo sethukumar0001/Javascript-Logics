@@ -1,9 +1,12 @@
-import Squre from "../logics/Squre";
-import Triangle from "../logics/Triangle";
-import Main from "../pages";
+import Javascript from "../pages/Javascript";
+import Squre from "../pages/Javascript/logics/Squre";
+import Triangle from "../pages/Javascript/logics/Triangle";
+import ReactJS from "../pages/ReactJS";
 
 export const LogicRoutes = [
-  { path: "/", name: "main", component: Main },
+  { path: "/", name: "Javascript", component: Javascript },
+  { path: "/reactjs", name: "ReactJS", component: ReactJS },
+  // javascript
   { path: "/squre", name: "squre", component: Squre },
-  { path:'/triangle', name:'Triangle', component:Triangle}
+  { path: "/triangle", name: "Triangle", component: Triangle },
 ];

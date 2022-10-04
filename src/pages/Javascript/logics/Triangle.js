@@ -1,3 +1,4 @@
+import { Breadcrumb } from "antd";
 import { CopyBlock, dracula } from "react-code-blocks";
 import "./index.css";
 
@@ -32,11 +33,11 @@ function Triangle() {
     return triangle;
   };
 
-//     *
-//    ***
-//   *****
-//  *******
-// *********
+  //     *
+  //    ***
+  //   *****
+  //  *******
+  // *********
 
   const trianglePyramid = () => {
     let num = 6;
@@ -50,6 +51,14 @@ function Triangle() {
 
   return (
     <div className="codemain">
+      <Breadcrumb
+        style={{
+          margin: "16px 0",
+        }}
+      >
+        <Breadcrumb.Item>Javascript</Breadcrumb.Item>
+        <Breadcrumb.Item>Triangle</Breadcrumb.Item>
+      </Breadcrumb>
       <h3>Increasing Pyramid</h3>
       <p className="codemaintext">{incPyramid()}</p>
       <div>

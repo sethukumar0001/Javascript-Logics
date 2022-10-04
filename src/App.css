@@ -1,7 +1,7 @@
 .main {
   align-items: flex-start;
   margin: 50px;
-  border: 1px dotted rgb(235, 222, 222);
+  /* border: 1px dotted rgb(235, 222, 222); */
   min-height: 80vh;
 }
 .header{

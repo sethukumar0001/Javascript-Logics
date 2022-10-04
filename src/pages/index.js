@@ -15,9 +15,6 @@ function Main() {
   ]);
   return (
     <div className="main-container">
-      <h1 className="header" style={{ color: randomColor() }}>
-        Logic Patterns
-      </h1>
       <div className="main">
         <div className="container">
           {list.map((item) => {

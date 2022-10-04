@@ -1,3 +1,4 @@
+import { Breadcrumb } from "antd";
 import { CopyBlock, dracula } from "react-code-blocks";
 import "./index.css";
 // ****
@@ -16,6 +17,14 @@ function Squre() {
   };
   return (
     <div className="codemain">
+          <Breadcrumb
+            style={{
+              margin: '16px 0',
+            }}
+          >
+            <Breadcrumb.Item>Javascript</Breadcrumb.Item>
+            <Breadcrumb.Item>Squre</Breadcrumb.Item>
+          </Breadcrumb>
       <h3>Squre Pattern</h3>
       <p className="codemaintext">{logicfun()}</p>
       <div>

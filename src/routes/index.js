@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import { LogicRoutes } from "./logic.routes";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import NotFoundPage from "../pages/NotFoundPage";
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-} from "@ant-design/icons";
+import { DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 const { Header, Content, Sider } = Layout;
-
 
 function MainRoutes(props) {
   const [collapsed, setCollapsed] = useState(false);
@@ -20,6 +16,7 @@ function MainRoutes(props) {
           style={{
             minHeight: "100vh",
           }}
+          className="layout"
         >
           <Sider
             collapsible

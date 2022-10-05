@@ -78,7 +78,6 @@ function Triangle() {
         />
         <br />
       </div>
-
       <h3>Decreasing Pyramid</h3>
       <p className="codemaintext">{decPyramid()}</p>
       <div>

@@ -11,23 +11,23 @@ function Squre() {
     let num = 5;
     let str = "";
     for (let i = 1; i <= num; i++) {
-      str += "* ".repeat(num)+"\n";
+      str += "* ".repeat(num) + "\n";
     }
     return str;
   };
   return (
     <div className="codemain">
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-            <Breadcrumb.Item>Javascript</Breadcrumb.Item>
-            <Breadcrumb.Item>Squre</Breadcrumb.Item>
-          </Breadcrumb>
+      <Breadcrumb
+        style={{
+          margin: "16px 0",
+        }}
+      >
+        <Breadcrumb.Item>Javascript</Breadcrumb.Item>
+        <Breadcrumb.Item>Squre</Breadcrumb.Item>
+      </Breadcrumb>
       <h3>Squre Pattern</h3>
       <p className="codemaintext">{logicfun()}</p>
-      <div>
+      <div className="codeblock">
         <CopyBlock
           language={"jsx"}
           text={`

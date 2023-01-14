@@ -2,14 +2,6 @@ import React from "react";
 import { Container, Content } from "./styles";
 import {
   FaTimes,
-  FaHome,
-  FaEnvelope,
-  FaRegSun,
-  FaUserAlt,
-  FaIdCardAlt,
-  FaRegFileAlt,
-  FaRegCalendarAlt,
-  FaChartBar,
   FaJs,
   FaReact,
 } from "react-icons/fa";
@@ -26,13 +18,13 @@ const Sidebar = ({ active }) => {
       <FaTimes onClick={closeSidebar} />
       <Content>
         <Link to="/">
-          <SidebarItem Icon={FaJs} Text="Js Patterns" />
+          <SidebarItem Icon={FaJs} Text="Js Patterns" path={"/"} />
         </Link>
         <Link to="/js-logics">
-          <SidebarItem Icon={FaJs} Text="Js Logics" />
+          <SidebarItem Icon={FaJs} Text="Js Logics" path="/js-logics" />
         </Link>
         <Link to="/reactjs">
-          <SidebarItem Icon={FaReact} Text="React JS" />
+          <SidebarItem Icon={FaReact} Text="React JS" path="/reactjs" />
         </Link>
       </Content>
     </Container>

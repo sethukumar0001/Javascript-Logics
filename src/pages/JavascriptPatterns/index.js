@@ -17,13 +17,6 @@ function JavascriptPatterns(props) {
                 <Link to={item.path}>
                   <p
                     className="mainItem"
-                    style={{
-                      border: "1px solid #002140",
-                      background: "white",
-                      fontSize: "16px",
-                      fontWeight: "500px",
-                      color: "#002140",
-                    }}
                   >
                     {item.name}
                   </p>

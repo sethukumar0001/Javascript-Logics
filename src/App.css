@@ -14,13 +14,19 @@
   display: flex;
 }
 .mainItem {
-  padding: 20px;
-  min-width: 100px;
-  margin-left: 30px;
+  padding: 15px;
+  /* min-width: 100px; */
+  margin-left: 10px;
   color: white;
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+
+  border: 1px solid #002140;
+  background: rgb(248, 248, 248);
+  font-size: 14px;
+  font-weight: 500px;
+  color: #002140;
 }
 a {
   text-decoration: none;

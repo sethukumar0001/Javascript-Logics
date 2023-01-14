@@ -15,18 +15,7 @@ function JavascriptLogics(props) {
             {list.map((item) => {
               return (
                 <Link to={item.path}>
-                  <p
-                    className="mainItem"
-                    style={{
-                      border: "1px solid #002140",
-                      background: "white",
-                      fontSize: "16px",
-                      fontWeight: "500px",
-                      color: "#002140",
-                    }}
-                  >
-                    {item.name}
-                  </p>
+                  <p className="mainItem">{item.name}</p>
                 </Link>
               );
             })}

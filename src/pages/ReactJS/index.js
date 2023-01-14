@@ -4,7 +4,7 @@ import MainLayout from "../../components/Layout";
 function ReactJS(props) {
   return (
     <MainLayout>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center",marginTop:'100px' }}>
         Coming Soon.....
       </div>
     </MainLayout>

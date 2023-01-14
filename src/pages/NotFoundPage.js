@@ -5,7 +5,7 @@ function NotFoundPage(props) {
     <div>
       <center>
         <img
-          src={require(`./lottie/not-found.gif`)}
+          src={require(`../components/lottie/not-found.gif`)}
           alt="img"
           style={{ height: "550", width: "550px", marginTop: "100px" }}
         />

@@ -1,7 +1,8 @@
-import { Breadcrumb } from "antd";
 import { CopyBlock, dracula } from "react-code-blocks";
-import MainLayout from "../../../components/Layout";
+import MainLayout from "../../components/Layout";
 import "./index.css";
+import { FcUpLeft } from "react-icons/fc";
+import { Link } from "react-router-dom";
 // ****
 // ****
 // ****
@@ -18,6 +19,9 @@ function Squre() {
   };
   return (
     <MainLayout>
+      <Link to="/">
+        <FcUpLeft size={30} className="back-icon" color="black" />
+      </Link>
       <div className="codemain">
         <h3>Squre Pattern</h3>
         <p className="codemaintext">{logicfun()}</p>

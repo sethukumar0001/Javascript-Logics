@@ -1,6 +1,7 @@
-import { Breadcrumb } from "antd";
 import { CopyBlock, dracula } from "react-code-blocks";
-import MainLayout from "../../../components/Layout";
+import { FcUpLeft } from "react-icons/fc";
+import { Link } from "react-router-dom";
+import MainLayout from "../../components/Layout";
 import "./index.css";
 
 function Triangle() {
@@ -52,6 +53,9 @@ function Triangle() {
 
   return (
     <MainLayout>
+     <Link to="/">
+        <FcUpLeft size={30} className="back-icon" color="black" />
+      </Link>
       <div className="codemain">
         <h3>Increasing Pyramid</h3>
         <p className="codemaintext">{incPyramid()}</p>

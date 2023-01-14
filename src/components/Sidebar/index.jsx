@@ -1,10 +1,6 @@
 import React from "react";
 import { Container, Content } from "./styles";
-import {
-  FaTimes,
-  FaJs,
-  FaReact,
-} from "react-icons/fa";
+import { FaTimes, FaJs, FaReact, FaMobile } from "react-icons/fa";
 import SidebarItem from "../SidebarItem";
 import { Link } from "react-router-dom";
 
@@ -25,6 +21,13 @@ const Sidebar = ({ active }) => {
         </Link>
         <Link to="/reactjs">
           <SidebarItem Icon={FaReact} Text="React JS" path="/reactjs" />
+        </Link>
+        <Link to="/react-native">
+          <SidebarItem
+            Icon={FaMobile}
+            Text="React Native"
+            path="/react-native"
+          />
         </Link>
       </Content>
     </Container>

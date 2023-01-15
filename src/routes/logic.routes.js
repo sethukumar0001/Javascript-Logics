@@ -1,4 +1,5 @@
 import JavascriptLogics from "../pages/JavascriptLogics";
+import PrimeNumber from "../pages/JavascriptLogics/PrimeNumber";
 import Javascript from "../pages/JavascriptPatterns";
 import Squre from "../pages/JavascriptPatterns/Squre";
 import Triangle from "../pages/JavascriptPatterns/Triangle";
@@ -10,8 +11,10 @@ export const LogicRoutes = [
   { path: "/", name: "Javascript", component: Javascript },
   { path: "/js-logics", name: "JSLogics", component: JavascriptLogics },
   { path: "/reactjs", name: "ReactJS", component: ReactJS },
-  { path:'/react-native', name:'ReactNative', component:ReactNative},
+  { path: "/react-native", name: "ReactNative", component: ReactNative },
   // javascript
   { path: "/squre", name: "squre", component: Squre },
   { path: "/triangle", name: "Triangle", component: Triangle },
+  //logics
+  { path: "/prime-number", name: "PrimeNumber", component: PrimeNumber },
 ];

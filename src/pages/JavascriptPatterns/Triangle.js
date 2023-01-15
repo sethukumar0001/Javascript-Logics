@@ -1,8 +1,5 @@
-import { CopyBlock, dracula } from "react-code-blocks";
-import { FcUpLeft } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import CodeBlockComponent from "../../components/CodeBlock";
 import MainLayout from "../../components/Layout";
-import "./index.css";
 
 function Triangle() {
   // *
@@ -53,70 +50,44 @@ function Triangle() {
 
   return (
     <MainLayout>
-     <Link to="/">
-        <FcUpLeft size={30} className="back-icon" color="black" />
-      </Link>
-      <div className="codemain">
-        <h3>Increasing Pyramid</h3>
-        <p className="codemaintext">{incPyramid()}</p>
-        <div>
-          <CopyBlock
-            language={"jsx"}
-            text={`
-          let num = 6;
+      <CodeBlockComponent
+        route={`/`}
+        header={"Increasing Pyramid"}
+        logicfun={incPyramid}
+        logic={`
+        let num = 6;
           let triangle = "";
           for (let i = 0; i < num; i++) {
             triangle += "* ".repeat(i)+"/n";
           }
-          return triangle;`}
-            showLineNumbers={true}
-            theme={dracula}
-            wrapLines={true}
-            codeBlock
-          />
-          <br />
-        </div>
-        <h3>Decreasing Pyramid</h3>
-        <p className="codemaintext">{decPyramid()}</p>
-        <div>
-          <CopyBlock
-            language={"jsx"}
-            text={`
-          let num = 6;
+          return triangle;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Decreasing Pyramid"}
+        logicfun={decPyramid}
+        logic={`
+        let num = 6;
           let triangle = "";
           for (let i = num; i > 0; i--) {
             triangle += "* ".repeat(i) + "/n";
           }
-          return triangle;`}
-            showLineNumbers={true}
-            theme={dracula}
-            wrapLines={true}
-            codeBlock
-          />
-          <br />
-        </div>
-
-        <h3>Isosceles Triangle Pyramid</h3>
-        <p className="codemaintext">{trianglePyramid()}</p>
-        <div>
-          <CopyBlock
-            language={"jsx"}
-            text={`
-          let num = 6;
-          let triangle = "";
-          for (let i = 1; i < num; i++) {
-            let space = num - i;
-            triangle += " ".repeat(space) + "*".repeat(2 * i - 1) + "/n";
-          }
-          return triangle;`}
-            showLineNumbers={true}
-            theme={dracula}
-            wrapLines={true}
-            codeBlock
-          />
-          <br />
-        </div>
-      </div>
+          return triangle;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Isosceles Triangle Pyramid"}
+        logicfun={trianglePyramid}
+        logic={`
+        let num = 6;
+        let triangle = "";
+        for (let i = 1; i < num; i++) {
+          let space = num - i;
+          triangle += " ".repeat(space) + "*".repeat(2 * i - 1) + "/n";
+        }
+        return triangle;
+        `}
+      />
     </MainLayout>
   );
 }

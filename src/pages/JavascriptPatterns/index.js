@@ -12,9 +12,9 @@ function JavascriptPatterns(props) {
       <div className="main-container">
         <div className="main">
           <div className="container">
-            {list.map((item) => {
+            {list.map((item,index) => {
               return (
-                <Link to={item.path}>
+                <Link to={item.path} key={index}>
                   <p
                     className="mainItem"
                   >

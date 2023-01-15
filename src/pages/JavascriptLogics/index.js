@@ -3,18 +3,15 @@ import { Link } from "react-router-dom";
 import MainLayout from "../../components/Layout";
 
 function JavascriptLogics(props) {
-  const [list] = useState([
-    { name: "Prime Number", path: "/squre" },
-    { name: "Fibanocci Number", path: "/triangle" },
-  ]);
+  const [list] = useState([{ name: "Prime Number", path: "/prime-number" }]);
   return (
     <MainLayout>
       <div className="main-container">
         <div className="main">
           <div className="container">
-            {list.map((item) => {
+            {list.map((item,index) => {
               return (
-                <Link to={item.path}>
+                <Link to={item.path} key={index}>
                   <p className="mainItem">{item.name}</p>
                 </Link>
               );

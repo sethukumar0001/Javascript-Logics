@@ -1,11 +1,10 @@
-import MainLayout from "../../components/Layout";
+import React from "react";
 import CodeBlockComponent from "../../components/CodeBlock";
-// ****
-// ****
-// ****
-// ****
+import MainLayout from "../../components/Layout";
 
-function Squre() {
+//check given number is prime number or not
+
+function PrimeNumber(props) {
   const logicfun = () => {
     let num = 5;
     let str = "";
@@ -17,8 +16,8 @@ function Squre() {
   return (
     <MainLayout>
       <CodeBlockComponent
-        route={`/`}
-        header={"Squre Pattern"}
+        route={`/js-logics`}
+        header={"Prime Number"}
         logicfun={logicfun}
         logic={`
         let num = 5;
@@ -33,4 +32,4 @@ function Squre() {
   );
 }
 
-export default Squre;
+export default PrimeNumber;

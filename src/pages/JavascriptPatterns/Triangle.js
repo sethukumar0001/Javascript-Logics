@@ -53,7 +53,7 @@ function Triangle() {
       <CodeBlockComponent
         route={`/`}
         header={"Increasing Pyramid"}
-        logicfun={incPyramid}
+        logicfun={()=>incPyramid()}
         logic={`
         let num = 6;
           let triangle = "";

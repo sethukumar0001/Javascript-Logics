@@ -3,7 +3,7 @@ import Header from "../Header";
 
 function MainLayout({ children }) {
   return (
-    <div>
+    <div className="layout">
       <Header />
       {children}
     </div>

@@ -37,10 +37,6 @@ a {
   cursor: pointer;
 }
 
-.layout {
-  min-height: 100vh;
-}
-
 .codemain {
   margin: 3vh;
   width: 80vh;
@@ -48,11 +44,39 @@ a {
 }
 .codemaintext {
   white-space: pre-wrap;
+  text-align: center;
 }
-.back-icon{
+.back-icon {
   margin: 10px;
+  margin-left: 3vh;
+}
+.ui {
+  margin: 3vh;
+}
+.ui input {
+  padding: 9px;
+  margin-right: 10px;
+}
+.ui button {
+  padding: 9px;
+  border: 1px solid rgb(70, 110, 223);
+  color: rgb(70, 110, 223);
+  background-color: white;
+  cursor: pointer;
+}
+.ui p {
+  font-size: 14px;
+}
+.layout {
+  margin-top: 10vh;
 }
 @media only screen and (max-width: 768px) {
+  .main {
+    margin: 0px;
+  }
+  .layout{
+    min-height: 10vh;
+  }
   /* For mobile phones: */
   .codemain {
     width: 100%;
@@ -66,7 +90,6 @@ a {
     text-align: center;
   }
 }
-
 
 /* 
 @media (min-width: 480px) {

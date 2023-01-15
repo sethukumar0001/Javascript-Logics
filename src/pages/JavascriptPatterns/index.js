@@ -6,6 +6,7 @@ function JavascriptPatterns(props) {
   const [list] = useState([
     { name: "Squre", path: "/squre" },
     { name: "Traingle", path: "/triangle" },
+
   ]);
   return (
     <MainLayout>

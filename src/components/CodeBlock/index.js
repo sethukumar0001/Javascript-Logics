@@ -3,7 +3,6 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import RouteHeader from "../RouterHeader";
 
 function CodeBlockComponent(props) {
-  console.log(props.logicfun())
   return (
     <>
       {props.route && <RouteHeader route={props.route} />}

@@ -8,7 +8,7 @@ function CodeBlockComponent(props) {
       {props.route && <RouteHeader route={props.route} />}
       <div className="codemain">
         <h3>{props.header}</h3>
-        <p className="codemaintext">{props.logicfun()}</p>
+        {props.logicfun&&<p className="codemaintext">{props.logicfun()}</p>}
         <div className="codeblock">
           <CopyBlock
             language={"jsx"}

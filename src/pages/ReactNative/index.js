@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainLayout from "../../components/Layout";
 import { BsGithub } from "react-icons/bs";
+import ReactNativeHelper from "./ReactNativeHelpers";
 
 function ReactNative(props) {
   const [list] = useState([
@@ -25,11 +26,18 @@ function ReactNative(props) {
     <MainLayout>
       <div className="main-container">
         <div className="main">
-        <h3 style={{marginTop:'100px',marginLeft:'10px'}}>Github Repositories</h3>
+          <h3 style={{ marginTop: "100px", marginLeft: "10px" }}>
+            Github Repositories
+          </h3>
           <div className="container">
             {list.map((item, index) => {
               return (
-                <a href={item.path} key={index} target="_blank" rel="noreferrer">
+                <a
+                  href={item.path}
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <p className="mainItem" style={{ display: "flex" }}>
                     <BsGithub size={20} />
                     <span style={{ marginLeft: "5px" }}>{item.name}</span>
@@ -38,6 +46,7 @@ function ReactNative(props) {
               );
             })}
           </div>
+          <ReactNativeHelper />
         </div>
       </div>
     </MainLayout>

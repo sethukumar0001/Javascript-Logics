@@ -17,4 +17,5 @@ export const LogicRoutes = [
   { path: "/triangle", name: "Triangle", component: Triangle },
   //logics
   { path: "/prime-number", name: "PrimeNumber", component: PrimeNumber },
+  //react-native
 ];

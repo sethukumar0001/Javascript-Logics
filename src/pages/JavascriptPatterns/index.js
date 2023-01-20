@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../../components/Layout";
-// https://www.tutorialstonight.com/js/javascript-star-pattern
+
 function JavascriptPatterns(props) {
   const [list] = useState([
     { name: "Squre", path: "/squre" },
     { name: "Traingle", path: "/triangle" },
+    { name: "Hallow Patterns", path: "/hallow-patterns" },
 
   ]);
   return (

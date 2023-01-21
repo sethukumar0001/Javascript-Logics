@@ -74,7 +74,7 @@ function PrimeNumber(props) {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
-        <button onClick={logicfun}>submit</button>
+        {/* <button onClick={logicfun}>submit</button> */}
         <br />
         <p>{result}</p>
       </div>

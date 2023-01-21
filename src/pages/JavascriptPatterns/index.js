@@ -8,18 +8,40 @@ function JavascriptPatterns(props) {
     { name: "Traingle", path: "/triangle" },
     { name: "Hallow Patterns", path: "/hallow-patterns" },
   ]);
+  const [searchList, setSearchList] = useState([
+    { name: "Squre", path: "/squre" },
+    { name: "Traingle", path: "/triangle" },
+    { name: "Hallow Patterns", path: "/hallow-patterns" },
+  ]);
+
+  const [search, setSearch] = useState("");
+  const handleChangeSearch = (e) => {
+    setSearch(e.target.value);
+    let mainList = list.filter((item) =>
+      item.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setSearchList(mainList);
+  };
   return (
     <MainLayout>
       <div className="main-container">
         <div className="main">
+          <div className="main-search">
+            <input
+              placeholder="Search here"
+              onChange={handleChangeSearch}
+              value={search}
+              className="input-search"
+            />
+          </div>
           <div className="container">
-            {list.map((item, index) => {
+            {searchList.map((item, index) => {
               return (
-                <div className="card-root">
-                  <Link to={item.path} key={index}>
+                <Link to={item.path} key={index}>
+                  <div className="card-root">
                     <p className="mainItem">{item.name}</p>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               );
             })}
           </div>

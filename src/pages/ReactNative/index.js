@@ -29,7 +29,7 @@ function ReactNative(props) {
           <h3 style={{ marginTop: "100px", marginLeft: "10px" }}>
             Github Repositories
           </h3>
-          <div className="container">
+          <div className="container-main">
             {list.map((item, index) => {
               return (
                 <a

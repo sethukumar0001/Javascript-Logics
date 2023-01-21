@@ -4,18 +4,38 @@ import MainLayout from "../../components/Layout";
 
 function JavascriptLogics(props) {
   const [list] = useState([{ name: "Prime Number", path: "/prime-number" }]);
+  const [searchList, setSearchList] = useState([
+    { name: "Prime Number", path: "/prime-number" },
+  ]);
+
+  const [search, setSearch] = useState("");
+  const handleChangeSearch = (e) => {
+    setSearch(e.target.value);
+    let mainList = list.filter((item) =>
+      item.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setSearchList(mainList);
+  };
   return (
     <MainLayout>
       <div className="main-container">
         <div className="main">
+          <div className="main-search">
+            <input
+              placeholder="Search here"
+              onChange={handleChangeSearch}
+              value={search}
+              className="input-search"
+            />
+          </div>
           <div className="container">
-            {list.map((item,index) => {
+            {searchList.map((item, index) => {
               return (
-                <div className="card-root">
                 <Link to={item.path} key={index}>
-                  <p className="mainItem">{item.name}</p>
+                  <div className="card-root">
+                    <p className="mainItem">{item.name}</p>
+                  </div>
                 </Link>
-              </div>
               );
             })}
           </div>

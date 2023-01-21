@@ -13,21 +13,7 @@
   flex-wrap: wrap;
   display: flex;
 }
-.mainItem {
-  padding: 15px;
-  /* min-width: 100px; */
-  margin-left: 10px;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
 
-  border: 1px solid #002140;
-  background: rgb(248, 248, 248);
-  font-size: 14px;
-  font-weight: 500px;
-  color: #002140;
-}
 a {
   text-decoration: none;
 }
@@ -70,11 +56,40 @@ a {
 .layout {
   margin-top: 10vh;
 }
+
+.card-root {
+  min-width: 100px;
+  margin: 5px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.15s all;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.card-root:hover {
+  box-shadow: 0px 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.mainItem {
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500px;
+  color: #002140;
+}
+
+/* Responsive */
 @media only screen and (max-width: 768px) {
   .main {
     margin: 0px;
   }
-  .layout{
+  .layout {
     min-height: 10vh;
   }
   /* For mobile phones: */
@@ -90,30 +105,3 @@ a {
     text-align: center;
   }
 }
-
-/* 
-@media (min-width: 480px) {
-  .layout {
-    max-width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .layout {
-    max-width: 100%;
-  }
-}
-@media (min-width: 1024px) {
-  .layout {
-    max-width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .layout {
-    max-width: 100%;
-  }
-}
-@media (min-width: 1201px) {
-  .layout {
-    max-width: 100%;
-  }
-} */

@@ -37,6 +37,7 @@ function ReactNative(props) {
                   key={index}
                   target="_blank"
                   rel="noreferrer"
+                  className="card-root"
                 >
                   <p className="mainItem" style={{ display: "flex" }}>
                     <BsGithub size={20} />

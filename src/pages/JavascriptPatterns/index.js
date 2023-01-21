@@ -7,22 +7,19 @@ function JavascriptPatterns(props) {
     { name: "Squre", path: "/squre" },
     { name: "Traingle", path: "/triangle" },
     { name: "Hallow Patterns", path: "/hallow-patterns" },
-
   ]);
   return (
     <MainLayout>
       <div className="main-container">
         <div className="main">
           <div className="container">
-            {list.map((item,index) => {
+            {list.map((item, index) => {
               return (
-                <Link to={item.path} key={index}>
-                  <p
-                    className="mainItem"
-                  >
-                    {item.name}
-                  </p>
-                </Link>
+                <div className="card-root">
+                  <Link to={item.path} key={index}>
+                    <p className="mainItem">{item.name}</p>
+                  </Link>
+                </div>
               );
             })}
           </div>

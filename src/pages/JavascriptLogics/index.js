@@ -11,9 +11,11 @@ function JavascriptLogics(props) {
           <div className="container">
             {list.map((item,index) => {
               return (
+                <div className="card-root">
                 <Link to={item.path} key={index}>
                   <p className="mainItem">{item.name}</p>
                 </Link>
+              </div>
               );
             })}
           </div>

@@ -35,6 +35,8 @@ a {
   height: auto;
 }
 .codemaintext {
+  display: flex;
+  justify-content: center;
   width: 100px;
   margin: auto;
   white-space: pre-wrap;
@@ -136,7 +138,8 @@ input.middle:focus {
     margin-top: 30px;
   }
   .codemain .codemaintext {
-    /* text-align: center; */
+    display: flex;
+    justify-content: center;    
     width: 100px;
     margin: auto;
   }

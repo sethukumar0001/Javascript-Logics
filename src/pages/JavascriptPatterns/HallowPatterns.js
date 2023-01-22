@@ -48,9 +48,63 @@ function HallowSqurePattern() {
       }
       str += "\n";
     }
-    console.log(str);
     return str;
   };
+  //     *
+  //    * *
+  //   *   *
+  //  *     *
+  // *********
+
+  const HallowPyramidlogicfun = () => {
+    let num = 7;
+    let str = "";
+    for (let i = 1; i < num; i++) {
+      let space = num - i;
+      if (i === 1 || i === num - 1) {
+        str += " ".repeat(space) + "*".repeat(2 * i - 1);
+        str += "\n";
+      } else {
+        // console.log(
+        //   i,
+        //   "<--- ((2 * i - 3) =>" + (2 * i - 3) + " = gap) --->",
+        //   "space--->",
+        //   space
+        // );
+        str += " ".repeat(space) + "*" + "  ".repeat(2 * i - 3) + "*";
+        str += "\n";
+      }
+    }
+    // console.log(str);
+    return str;
+  };
+
+  const HallowDimondlogicfun = () => {
+    let num = 7;
+    let str = "";
+    for (let i = 1; i < num; i++) {
+      let space = num - i;
+      if (i === 1) {
+        str += " ".repeat(space) + "*".repeat(2 * i - 1);
+        str += "\n";
+      } else {
+        str += " ".repeat(space) + "*" + " ".repeat(2 * i - 3) + "*";
+        str += "\n";
+      }
+    }
+    for (let j = num - 2; j > 0; j--) {
+      let space = num - j;
+      if (j === 1) {
+        str += " ".repeat(space) + "*".repeat(2 * j - 1);
+        str += "\n";
+      } else {
+        str += " ".repeat(space) + "*" + " ".repeat(2 * j - 3) + "*";
+        str += "\n";
+      }
+    }
+    return str;
+  };
+
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -58,7 +112,7 @@ function HallowSqurePattern() {
         header={"HallowSqurePattern"}
         logicfun={logicfun}
         logic={`
-        let num = 6;
+        let num-2 = 6;
         let str = "";
         for (let i = 0; i < num; i++) {
           for (let j = 0; j < num; j++) {
@@ -96,6 +150,54 @@ function HallowSqurePattern() {
             }
           }
           str += "/n";
+        }
+        return str;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Hollow Pyramid Star Pattern"}
+        logicfun={HallowPyramidlogicfun}
+        logic={`
+        let num = 7;
+        let str = "";
+        for (let i = 1; i < num; i++) {
+          let space = num - i;
+          if (i === 1 || i === num - 1) {
+            str += " ".repeat(space) + "*".repeat(2 * i - 1);
+            str += "/n";
+          } else {
+            str += " ".repeat(space) + "*" + " ".repeat(2 * i - 3) + "*";
+            str += "/n";
+          }
+        }
+        return str;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Hollow Diamond Pattern"}
+        logicfun={HallowDimondlogicfun}
+        logic={`
+        let num = 7;
+        let str = "";
+        for (let i = 1; i < num; i++) {
+          let space = num - i;
+          if (i === 1) {
+            str += " ".repeat(space) + "*".repeat(2 * i - 1);
+            str += "/n";
+          } else {
+            str += " ".repeat(space) + "*" + " ".repeat(2 * i - 3) + "*";
+            str += "/n";
+          }
+        }
+        for (let j = num - 2; j > 0; j--) {
+          let space = num - j;
+          if (j === 1) {
+            str += " ".repeat(space) + "*".repeat(2 * j - 1);
+            str += "/n";
+          } else {
+            str += " ".repeat(space) + "*" + " ".repeat(2 * j - 3) + "*";
+            str += "/n";
+          }
         }
         return str;
         `}

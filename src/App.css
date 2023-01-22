@@ -35,8 +35,10 @@ a {
   height: auto;
 }
 .codemaintext {
+  width: 100px;
+  margin: auto;
   white-space: pre-wrap;
-  text-align: center;
+  /* text-align: center; */
 }
 .back-icon {
   margin: 10px;
@@ -73,14 +75,13 @@ a {
   border-color: white;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   margin-top: 10px;
   align-self: center;
   padding-left: 20px;
   outline-width: 0;
   position: fixed;
   margin-top: 50px;
-
 }
 input.middle:focus {
   outline-width: 0;
@@ -112,9 +113,9 @@ input.middle:focus {
   font-weight: 500px;
   color: #002140;
 }
-.text{
+.text {
   text-align: center;
-  color:'black'
+  color: "black";
 }
 
 /* Responsive */
@@ -135,9 +136,11 @@ input.middle:focus {
     margin-top: 30px;
   }
   .codemain .codemaintext {
-    text-align: center;
+    /* text-align: center; */
+    width: 100px;
+    margin: auto;
   }
-  .container{
+  .container {
     margin-top: 74px;
   }
 

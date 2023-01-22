@@ -10,6 +10,7 @@ function JavascriptPatterns(props) {
     { name: "Squre", path: "/squre" },
     { name: "Traingle", path: "/triangle" },
     { name: "Hallow Patterns", path: "/hallow-patterns" },
+    { name: "Star Patterns", path: "/star-patterns" },
   ]);
   const [searchList, setSearchList] = useState([]);
   const [search, setSearch] = useState("");

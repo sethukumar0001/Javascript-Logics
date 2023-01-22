@@ -1,7 +1,7 @@
 import React from "react";
-import CodeBlockComponent from "../../../components/CodeBlock";
+import CodeBlockComponent from "../../../../components/CodeBlock";
 
-function ReactNativeHelper(props) {
+function ReactNativeComponent(props) {
   return (
     <>
       <CodeBlockComponent
@@ -55,4 +55,4 @@ function ReactNativeHelper(props) {
   );
 }
 
-export default ReactNativeHelper;
+export default ReactNativeComponent;

@@ -2,45 +2,25 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../../components/Layout";
 
-function JavascriptPatterns(props) {
+function Helpers(props) {
   /* -------------------------------------------------------------------------- */
   /*                               UseState Section                             */
   /* -------------------------------------------------------------------------- */
   const [list] = useState([
-    { name: "Squre", path: "/squre" },
-    { name: "Traingle", path: "/triangle" },
-    { name: "Hallow Patterns", path: "/hallow-patterns" },
+    { name: "React Native", path: "/react-native" },
+    { name: "React Js", path: "/reactjs" },
   ]);
   const [searchList, setSearchList] = useState([]);
-  const [search, setSearch] = useState("");
   /* -------------------------------------------------------------------------- */
-  /*                               UseEffect Section                            */
+  /*                               Useeffect section                            */
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
     setSearchList(list);
   }, []);
-  /* -------------------------------------------------------------------------- */
-  /*                               Onchange section                             */
-  /* -------------------------------------------------------------------------- */
-  const handleChangeSearch = (e) => {
-    setSearch(e.target.value);
-    let mainList = list.filter((item) =>
-      item.name.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    setSearchList(mainList);
-  };
   return (
     <MainLayout>
       <div className="main-container">
         <div className="main">
-          <div className="main-search">
-            <input
-              placeholder="Search here"
-              onChange={handleChangeSearch}
-              value={search}
-              className="input-search"
-            />
-          </div>
           <div className="container">
             {searchList.map((item, index) => {
               return (
@@ -58,4 +38,4 @@ function JavascriptPatterns(props) {
   );
 }
 
-export default JavascriptPatterns;
+export default Helpers;

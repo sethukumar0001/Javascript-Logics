@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../../components/Layout";
 
 function JavascriptLogics(props) {
+  /* -------------------------------------------------------------------------- */
+  /*                               UseState Section                             */
+  /* -------------------------------------------------------------------------- */
   const [list] = useState([{ name: "Prime Number", path: "/prime-number" }]);
-  const [searchList, setSearchList] = useState([
-    { name: "Prime Number", path: "/prime-number" },
-  ]);
-
+  const [searchList, setSearchList] = useState([]);
   const [search, setSearch] = useState("");
+  /* -------------------------------------------------------------------------- */
+  /*                               UseEffect Section                            */
+  /* -------------------------------------------------------------------------- */
+  useEffect(() => {
+    setSearchList(list);
+  }, []);
+  /* -------------------------------------------------------------------------- */
+  /*                               Onchange section                             */
+  /* -------------------------------------------------------------------------- */
   const handleChangeSearch = (e) => {
     setSearch(e.target.value);
     let mainList = list.filter((item) =>

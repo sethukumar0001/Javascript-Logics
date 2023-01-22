@@ -1,16 +1,16 @@
 import React from "react";
-import { LogicRoutes } from "./logic.routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFoundPage from "../pages/NotFoundPage";
+import { AllRoutes } from "./all.routes";
 
 function MainRoutes(props) {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          {LogicRoutes.map((item, key) => {
+          {AllRoutes.map((item, key) => {
             let Element = item.component;
-            return <Route key={key} path={item.path}  element={<Element />} />;
+            return <Route key={key} path={item.path} element={<Element />} />;
           })}
           <Route path={"*"} element={<NotFoundPage />} />
         </Routes>

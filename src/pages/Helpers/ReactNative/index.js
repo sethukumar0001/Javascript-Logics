@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import MainLayout from "../../components/Layout";
 import { BsGithub } from "react-icons/bs";
+import MainLayout from "../../../components/Layout";
+import RouteHeader from "../../../components/RouterHeader";
 import ReactNativeHelper from "./ReactNativeHelpers";
 
 function ReactNative(props) {
@@ -25,8 +26,9 @@ function ReactNative(props) {
   return (
     <MainLayout>
       <div className="main-container">
-        <div className="main">
-          <h3 style={{ marginTop: "100px", marginLeft: "10px" }}>
+        <div className="main" style={{ marginTop: "100px" }}>
+        <RouteHeader route={`/helpers`} />
+          <h3 style={{  marginLeft: "10px" }}>
             Github Repositories
           </h3>
           <div className="container-main">

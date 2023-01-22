@@ -19,15 +19,8 @@ const Sidebar = ({ active }) => {
         <Link to="/js-logics">
           <SidebarItem Icon={FaJs} Text="Js Logics" path="/js-logics" />
         </Link>
-        {/* <Link to="/reactjs">
-          <SidebarItem Icon={FaReact} Text="React JS" path="/reactjs" />
-        </Link> */}
-        <Link to="/react-native">
-          <SidebarItem
-            Icon={FaMobile}
-            Text="React Native"
-            path="/react-native"
-          />
+        <Link to="/helpers">
+          <SidebarItem Icon={FaMobile} Text="Helpers" path="/helpers" />
         </Link>
       </Content>
     </Container>

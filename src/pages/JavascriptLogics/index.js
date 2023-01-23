@@ -6,7 +6,12 @@ function JavascriptLogics(props) {
   /* -------------------------------------------------------------------------- */
   /*                               UseState Section                             */
   /* -------------------------------------------------------------------------- */
-  const [list] = useState([{ name: "Prime Number", path: "/prime-number" }]);
+  const [list] = useState([
+    { name: "Prime Number", path: "/prime-number" },
+    { name: "Reverse String", path: "/reverse-string" },
+    { name: "Fibanocci / Factorial", path: "/fib-fact" },
+
+  ]);
   const [searchList, setSearchList] = useState([]);
   const [search, setSearch] = useState("");
   /* -------------------------------------------------------------------------- */

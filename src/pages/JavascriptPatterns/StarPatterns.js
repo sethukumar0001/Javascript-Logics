@@ -52,6 +52,42 @@ function StarPatterns() {
     }
     return str;
   };
+
+  //  ***   ***
+  // ***** *****
+  // ***********
+  //  *********
+  //   *******
+  //    *****
+  //     ***
+  //      *
+
+  const HeartStarPattern = () => {
+    let num = 6;
+    let str = "";
+
+    for (let i = num / 2; i < num; i += 2) {
+      for (let j = 1; j < num - i; j += 2) {
+        str += " ";
+      }
+      for (let j = 1; j < i + 1; j++) {
+        str += "*";
+      }
+      for (let j = 1; j < num - i + 1; j++) {
+        str += " ";
+      }
+      for (let j = 1; j < i + 1; j++) {
+        str += "*";
+      }
+      str += "\n";
+    }
+    for (let j = num; j > 0; j--) {
+      let space = num - j;
+      str += " ".repeat(space) + "*".repeat(2 * j - 1);
+      str += "\n";
+    }
+    return str;
+  };
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -86,6 +122,38 @@ function StarPatterns() {
         }
         for (let j = num + 1; j > 0; j--) {
           str += "*".repeat(j);
+          str += "/n";
+        }
+        return str;
+        `}
+      />
+
+      <CodeBlockComponent
+        header={"Heart Star Pattern"}
+        logicfun={HeartStarPattern}
+        logic={`
+        let num = 6;
+        let str = ''
+        //upper portion
+        for (let i = num/2; i < num; i += 2) {
+          for (let j = 1; j < num-i; j += 2) {
+            str += " "
+          }
+          for (let j = 1; j < i+1; j++) {
+            str += "*"
+          }
+          for (let j = 1; j < num-i+1; j++) {
+            str += " "
+          }
+          for (let j = 1; j < i+1; j++) {
+            str += "*"
+          }
+          str += "/n"
+        }
+        //lower portion
+        for (let j = num; j > 0; j--) {
+          let space = num - j;
+          str += " ".repeat(space) + "*".repeat(2 * j - 1);
           str += "/n";
         }
         return str;

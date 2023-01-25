@@ -20,24 +20,26 @@ function FibanocciAndFactorial(props) {
       <CodeBlockComponent
         route={`/js-logics`}
         header={"Fibanocci"}
-        logicfun={()=>FibanocciFunction(5)}
+        logicfun={() => FibanocciFunction(5)}
         logic={`
-        let n = 5;
+      const fib = (n = 5) => {
         if(n<2){
             return n
         }
         return fib(n-1)+fib(n-2)
+      }
           `}
       />
       <CodeBlockComponent
         header={"Factorial"}
-        logicfun={()=>FactorialFunction(5)}
+        logicfun={() => FactorialFunction(5)}
         logic={`
-        let n = 5;
+      const factorial = (n = 5) => {
         if(n<2){
             return 1
         }
         return n*factorial(n-1)
+      }
           `}
       />
     </MainLayout>

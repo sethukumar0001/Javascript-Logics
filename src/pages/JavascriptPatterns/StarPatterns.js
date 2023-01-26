@@ -65,25 +65,45 @@ function StarPatterns() {
   const HeartStarPattern = () => {
     let num = 6;
     let str = "";
-
+    //******* Upper Shape *******//
     for (let i = num / 2; i < num; i += 2) {
-      for (let j = 1; j < num - i; j += 2) {
+      for (let j = 0; j < num - i - 1; j += 2) {
         str += " ";
       }
-      for (let j = 1; j < i + 1; j++) {
+      for (let j = 0; j < i; j++) {
         str += "*";
       }
-      for (let j = 1; j < num - i + 1; j++) {
+      for (let j = 0; j < num - i; j++) {
         str += " ";
       }
-      for (let j = 1; j < i + 1; j++) {
+      for (let j = 0; j < i; j++) {
         str += "*";
       }
       str += "\n";
     }
-    for (let j = num; j > 0; j--) {
-      let space = num - j;
-      str += " ".repeat(space) + "*".repeat(2 * j - 1);
+
+    //******* Lower Pyramin *******//
+    // for (let j = num; j > 0; j--) {
+    //   let space = num - j;
+    //   str += " ".repeat(space) + "*".repeat(2 * j - 1);
+    //   str += "\n";
+    // }
+    for (let i = 0; i < num; i++) {
+      //  let spaces
+      for (let j = 0; j < i; j++) {
+        str += " ";
+      }
+      //method 1
+      // for (let k = 0; k < (num - i) * 2 - 1; k++) {
+      //   str += "*";
+      // }
+      //method 2
+      for (let k = 0; k < num - i; k++) {
+        str += "*";
+      }
+      for (let k = num - i - 1; k > 0; k--) {
+        str += "*";
+      }
       str += "\n";
     }
     return str;
@@ -133,27 +153,46 @@ function StarPatterns() {
         logicfun={HeartStarPattern}
         logic={`
         let num = 6;
-        let str = ''
-        //upper portion
-        for (let i = num/2; i < num; i += 2) {
-          for (let j = 1; j < num-i; j += 2) {
-            str += " "
+        let str = "";
+        //******* Upper Shape *******//
+        for (let i = num / 2; i < num; i += 2) {
+          for (let j = 0; j < num - i - 1; j += 2) {
+            str += " ";
           }
-          for (let j = 1; j < i+1; j++) {
-            str += "*"
+          for (let j = 0; j < i; j++) {
+            str += "*";
           }
-          for (let j = 1; j < num-i+1; j++) {
-            str += " "
+          for (let j = 0; j < num - i; j++) {
+            str += " ";
           }
-          for (let j = 1; j < i+1; j++) {
-            str += "*"
+          for (let j = 0; j < i; j++) {
+            str += "*";
           }
-          str += "/n"
+          str += "/n";
         }
-        //lower portion
-        for (let j = num; j > 0; j--) {
-          let space = num - j;
-          str += " ".repeat(space) + "*".repeat(2 * j - 1);
+    
+        //******* Lower Pyramin *******//
+        // for (let j = num; j > 0; j--) {
+        //   let space = num - j;
+        //   str += " ".repeat(space) + "*".repeat(2 * j - 1);
+        //   str += "/n";
+        // }
+        for (let i = 0; i < num; i++) {
+          //  let spaces
+          for (let j = 0; j < i; j++) {
+            str += " ";
+          }
+          //method 1
+          // for (let k = 0; k < (num - i) * 2 - 1; k++) {
+          //   str += "*";
+          // }
+          //method 2
+          for (let k = 0; k < num - i; k++) {
+            str += "*";
+          }
+          for (let k = num - i - 1; k > 0; k--) {
+            str += "*";
+          }
           str += "/n";
         }
         return str;

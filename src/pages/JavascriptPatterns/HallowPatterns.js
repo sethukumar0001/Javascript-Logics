@@ -105,6 +105,34 @@ function HallowSqurePattern() {
     return str;
   };
 
+  // * * * * * * * * * *
+  // * *             * *
+  // *   *         *   *
+  // *     *     *     *
+  // *       * *       *
+  // *       * *       *
+  // *     *     *     *
+  // *   *         *   *
+  // * *             * *
+  // * * * * * * * * * *
+
+  
+  const hallowSqureWithDiagnols = () => {
+    let num = 6;
+    let str = "";
+    for (let i = 1; i <= num; i++) {
+      for (let j = 1; j <= num; j++) {
+        if(i===1 || i===num || j===1 || j===num || i===j || j===(num - i + 1)){
+            str += "* ";
+          }else{
+            str += "  ";
+          }
+      }
+      str += "\n";
+    }
+    return str;
+  };
+
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -198,6 +226,34 @@ function HallowSqurePattern() {
             str += " ".repeat(space) + "*" + " ".repeat(2 * j - 3) + "*";
             str += "/n";
           }
+        }
+        return str;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Hollow Square with Diagonals"}
+        logicfun={hallowSqureWithDiagnols}
+        logic={`
+        /*
+        * Print star for, 
+        * first row (i==1) or 
+        * last row (i==num) or
+        * first column (j==1) or
+        * last column (j==num) or 
+        * row equal to column (i==j) or 
+        * column equal to num-row (j==num-i+1)
+        */
+        let num = 6;
+        let str = "";
+        for (let i = 1; i <= num; i++) {
+          for (let j = 1; j <= num; j++) {
+            if(i==1 || i==num || j==1 || j==num || i==j || j==(num - i + 1)){
+                str += "* ";
+              }else{
+                str += "  ";
+              }
+          }
+          str += "/n";
         }
         return str;
         `}

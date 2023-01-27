@@ -14,6 +14,55 @@ function Squre() {
     }
     return str;
   };
+
+  // ********
+  //  ********
+  //   ********
+  //    ********
+  //     ********
+
+  function parallelogramFun() {
+    let num = 5;
+    let str = "";
+    for (let i = 1; i <= num; i++) {
+      for (let j = 1; j <= i; j++) {
+        str += "  ";
+      }
+      for (let j = 1; j <= num; j++) {
+        str += "* ";
+      }
+      str += "\n";
+    }
+    return str;
+  }
+
+  // *********
+  //  *       *
+  //   *       *
+  //    *       *
+  //     *       *
+  //      *********
+
+  function hallowParallelogramFun() {
+    let num = 5;
+    let str = "";
+    for (let i = 1; i <= num; i++) {
+      for (let j = 1; j <= i; j++) {
+        str += "  ";
+      }
+      for (let j = 1; j <= num; j++) {
+        console.log(j, "=");
+        if (i === 1 || i === num || j === 1 || j === num) {
+          str += "* ";
+        } else {
+          str += "   ";
+        }
+      }
+      str += "\n";
+    }
+    return str;
+  }
+
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -27,6 +76,47 @@ function Squre() {
             str += "* ".repeat(num)+"/n";
           }
           return str;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Parallelogram"}
+        logicfun={parallelogramFun}
+        logic={`
+        let num = 5;
+        let str = "";
+        for (let i = 1; i <= num; i++) {
+          for (let j = 1; j <= i; j++) {
+            str += "  ";
+          }
+          for (let j = 1; j <= num; j++) {
+            str += "* ";
+          }
+          str += "/n";
+        }
+        return str;
+        `}
+      />
+      <CodeBlockComponent
+        header={"Hallow Parallelogram"}
+        logicfun={hallowParallelogramFun}
+        logic={`
+        let num = 5;
+        let str = "";
+        for (let i = 1; i <= num; i++) {
+          for (let j = 1; j <= i; j++) {
+            str += "  ";
+          }
+          for (let j = 1; j <= num; j++) {
+            console.log(j, "=");
+            if (i === 1 || i === num || j === 1 || j === num) {
+              str += "* ";
+            } else {
+              str += "  ";
+            }
+          }
+          str += "/n";
+        }
+        return str;
         `}
       />
     </MainLayout>

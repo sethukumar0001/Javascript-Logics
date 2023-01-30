@@ -243,7 +243,7 @@ function StarPatterns() {
             }
             str += "c";
           }
-          str += "\n";
+          str += "/n";
         }
         return str;
         `}

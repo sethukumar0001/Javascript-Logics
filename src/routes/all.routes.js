@@ -1,3 +1,4 @@
+import { AlgorithmsRoutes } from "./algorithm.routes";
 import { HelpersRoutes } from "./helpers.routes";
 import { JavascriptLogicRoutes } from "./js-logics.routes";
 import { JavascriptPatternRoutes } from "./js-patterns.routes";
@@ -7,5 +8,6 @@ export const AllRoutes = [
     ...HelpersRoutes,
     ...SideMenuRoutes,
     ...JavascriptLogicRoutes,
-    ...JavascriptPatternRoutes
+    ...JavascriptPatternRoutes,
+    ...AlgorithmsRoutes
 ];

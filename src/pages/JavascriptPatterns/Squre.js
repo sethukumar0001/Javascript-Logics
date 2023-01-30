@@ -51,7 +51,6 @@ function Squre() {
         str += "  ";
       }
       for (let j = 1; j <= num; j++) {
-        console.log(j, "=");
         if (i === 1 || i === num || j === 1 || j === num) {
           str += "* ";
         } else {
@@ -107,7 +106,6 @@ function Squre() {
             str += "  ";
           }
           for (let j = 1; j <= num; j++) {
-            console.log(j, "=");
             if (i === 1 || i === num || j === 1 || j === num) {
               str += "* ";
             } else {

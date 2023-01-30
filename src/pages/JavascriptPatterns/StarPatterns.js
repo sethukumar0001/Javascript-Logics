@@ -25,7 +25,6 @@ function StarPatterns() {
       str += " ".repeat(space) + "*".repeat(2 * i - 1);
       str += "\n";
     }
-    // console.log(str);
     return str;
   };
 

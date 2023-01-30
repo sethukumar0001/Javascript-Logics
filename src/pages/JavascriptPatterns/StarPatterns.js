@@ -107,6 +107,34 @@ function StarPatterns() {
     }
     return str;
   };
+
+  //   +
+  //   +
+  //   +
+  //   +
+  // +++++++++
+  //   +
+  //   +
+  //   +
+  //   +
+  const PlusPattern = () => {
+    let num = 5;
+    let str = "";
+    for (let i = 1; i < 2 * num; i++) {
+      if (i === num) {
+        for (let j = 1; j < 2 * num - 1; j++) {
+          str += "r";
+        }
+      } else {
+        for (let j = 1; j < num - 1; j++) {
+          str += " ";
+        }
+        str += "c";
+      }
+      str += "\n";
+    }
+    return str;
+  };
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -192,6 +220,24 @@ function StarPatterns() {
           for (let k = num - i - 1; k > 0; k--) {
             str += "*";
           }
+          str += "/n";
+        }
+        return str;
+        `}
+      />
+
+      <CodeBlockComponent
+        header={"Plus Star Pattern"}
+        logicfun={PlusPattern}
+        logic={`
+        let num = 5;
+        let str = "";
+        for (let i = 1; i <= num; i++) {
+          str += "*".repeat(i);
+          str += "/n";
+        }
+        for (let j = num + 1; j > 0; j--) {
+          str += "*".repeat(j);
           str += "/n";
         }
         return str;

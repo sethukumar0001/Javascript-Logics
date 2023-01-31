@@ -135,6 +135,35 @@ function StarPatterns() {
     }
     return str;
   };
+
+  // *       *
+  //  *     *
+  //   *   *
+  //    * *
+  //     *
+  //    * *
+  //   *   *
+  //  *     *
+  // *       *
+
+  const XPattern = () => {
+    let num = 5;
+    let str = "";
+    let count = num * 2 - 1;
+    for (let i = 1; i <= 2 * num; i++) {
+      for (let j = 1; j <= 2 * num - 1; j++) {
+        if (i === j || j === count - i + 1) {
+          str += "*";
+        } else {
+          str += " ";
+        }
+      }
+
+      str += "\n";
+    }
+    return str;
+  };
+
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -243,6 +272,28 @@ function StarPatterns() {
             }
             str += "c";
           }
+          str += "/n";
+        }
+        return str;
+        `}
+      />
+
+      <CodeBlockComponent
+        header={"X Star Pattern"}
+        logicfun={XPattern}
+        logic={`
+        let num = 5;
+        let str = "";
+        let count = num * 2 - 1;
+        for (let i = 1; i <= 2 * num; i++) {
+            for (let j = 1; j <= 2 * num - 1; j++) {
+              if( i === j || (j === count - i + 1)){
+                str += "*";
+              }else{
+                str += " ";
+              }
+            }
+          
           str += "/n";
         }
         return str;

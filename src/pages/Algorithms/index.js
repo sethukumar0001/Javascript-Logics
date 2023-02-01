@@ -6,7 +6,10 @@ function Algorithm(props) {
   /* -------------------------------------------------------------------------- */
   /*                               UseState Section                             */
   /* -------------------------------------------------------------------------- */
-  const [list] = useState([{ name: "Bubble Sort", path: "/bubble-sort" }]);
+  const [list] = useState([
+    { name: "Bubble Sort", path: "/bubble-sort" },
+    { name: "Selection Sort", path: "/selection-sort" },
+  ]);
   const [searchList, setSearchList] = useState([]);
   const [search, setSearch] = useState("");
   /* -------------------------------------------------------------------------- */
@@ -14,6 +17,7 @@ function Algorithm(props) {
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
     setSearchList(list);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /* -------------------------------------------------------------------------- */

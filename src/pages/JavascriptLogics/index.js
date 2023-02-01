@@ -19,6 +19,7 @@ function JavascriptLogics(props) {
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
     setSearchList(list);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   /* -------------------------------------------------------------------------- */
   /*                               Onchange section                             */

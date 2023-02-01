@@ -15,7 +15,8 @@ function Helpers(props) {
   /*                               Useeffect section                            */
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
-    setSearchList(list);
+    setSearchList(list)
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <MainLayout>

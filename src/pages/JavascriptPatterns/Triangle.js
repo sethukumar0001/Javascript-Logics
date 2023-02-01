@@ -2,10 +2,10 @@ import CodeBlockComponent from "../../components/CodeBlock";
 import MainLayout from "../../components/Layout";
 
 function Triangle() {
-  //     *
-  //    * *
-  //   * * *
-  //  * * * *
+  // *
+  // * *
+  // * * *
+  // * * * *
   // * * * * *
 
   const incPyramid = () => {
@@ -18,16 +18,60 @@ function Triangle() {
   };
 
   // * * * * * *
-  //  * * * * *
-  //   * * * *
-  //    * * *
-  //     * *
-  //      *
+  // * * * * *
+  // * * * *
+  // * * *
+  // * *
+  // *
   const decPyramid = () => {
     let num = 6;
     let triangle = "";
     for (let i = num; i > 0; i--) {
       triangle += "* ".repeat(i) + "\n";
+    }
+    return triangle;
+  };
+
+  //           *
+  //         * *
+  //       * * *
+  //     * * * *
+  //   * * * * *
+  // * * * * * *
+
+  const rightTrianglePyramid = () => {
+    let num = 6;
+    let triangle = "";
+    for (let i = 0; i < num; i++) {
+      for (let j = num - i; j > 0; j--) {
+        triangle += "   ";
+      }
+      for (let k = 0; k <= i; k++) {
+        triangle += "* ";
+      }
+      triangle += "\n";
+    }
+    return triangle;
+  };
+
+  // * * * * * *
+  //   * * * * *
+  //     * * * *
+  //       * * *
+  //         * *
+  //           *
+
+  const leftTrianglePyramid = () => {
+    let num = 6;
+    let triangle = "";
+    for (let i = num; i > 0; i--) {
+      for (let j = num - i; j > 0; j--) {
+        triangle += "  ";
+      }
+      for (let k = 0; k < i; k++) {
+        triangle += "* ";
+      }
+      triangle += "\n";
     }
     return triangle;
   };
@@ -92,7 +136,7 @@ function Triangle() {
     <MainLayout>
       <CodeBlockComponent
         route={`/`}
-        header={"Increasing Pyramid"}
+        header={"Left Tringle Pyramid"}
         logicfun={incPyramid}
         logic={`
         let num = 6;
@@ -104,7 +148,7 @@ function Triangle() {
         `}
       />
       <CodeBlockComponent
-        header={"Decreasing Pyramid"}
+        header={"Right Tringle Pyramid"}
         logicfun={decPyramid}
         logic={`
         let num = 6;
@@ -113,6 +157,42 @@ function Triangle() {
             triangle += "* ".repeat(i) + "/n";
           }
           return triangle;
+        `}
+      />
+      <CodeBlockComponent
+        header={"mirrored right triangle star pattern"}
+        logicfun={rightTrianglePyramid}
+        logic={`
+        let num = 6;
+        let triangle = "";
+        for (let i = 0; i < num; i++) {
+          for (let j = num - i; j > 0; j--) {
+            triangle += "   ";
+          }
+          for (let k = 0; k <= i; k++) {
+            triangle += "* ";
+          }
+          triangle += "/n";
+        }
+        return triangle;
+        `}
+      />
+      <CodeBlockComponent
+        header={"mirrored Left triangle star pattern"}
+        logicfun={leftTrianglePyramid}
+        logic={`
+        let num = 6;
+        let triangle = "";
+        for (let i = num; i > 0; i--) {
+          for (let j = num - i; j > 0; j--) {
+            triangle += "  ";
+          }
+          for (let k = 0; k < i; k++) {
+            triangle += "* ";
+          }
+          triangle += "/n";
+        }
+        return triangle;
         `}
       />
       <CodeBlockComponent

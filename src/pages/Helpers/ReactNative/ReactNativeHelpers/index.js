@@ -51,6 +51,17 @@ function ReactNativeComponent(props) {
         ./gradlew assembleDebug
         `}
       />
+
+      <CodeBlockComponent
+        header={" React Native IOS Status Bar Color issue"}
+        logic={`
+          https://github.com/UjjalKar/rn-status-bar
+
+          inside info.plist
+          <key>UIViewControllerBasedStatusBarAppearance</key>  
+        	<true/>  
+        `}
+      />
     </>
   );
 }

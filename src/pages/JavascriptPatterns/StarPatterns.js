@@ -164,6 +164,42 @@ function StarPatterns() {
     return str;
   };
 
+  // * * * * * *
+  //   * * * * *
+  //     * * * *
+  //       * * *
+  //         * *
+  //           *
+  //         * *
+  //       * * *
+  //     * * * *
+  //   * * * * *
+  // * * * * * *
+
+  const leftTrianglePattern = () => {
+    let num = 6;
+    let str = "";
+    for (let i = 1; i < num; i++) {
+      for (let j = 0; j < i; j++) {
+        str += "-";
+      }
+      for (let j = 0; j < num - i; j++) {
+        str += "*";
+      }
+      str += "\n";
+    }
+    for (let i = 1; i < num; i++) {
+      for (let j = num - i - 1; j > 0; j--) {
+        str += "-";
+      }
+      for (let j = 0; j <= i; j++) {
+        str += "*";
+      }
+      str += "\n";
+    }
+    return str;
+  };
+
   return (
     <MainLayout>
       <CodeBlockComponent
@@ -281,6 +317,28 @@ function StarPatterns() {
       <CodeBlockComponent
         header={"X Star Pattern"}
         logicfun={XPattern}
+        logic={`
+        let num = 5;
+        let str = "";
+        let count = num * 2 - 1;
+        for (let i = 1; i <= 2 * num; i++) {
+            for (let j = 1; j <= 2 * num - 1; j++) {
+              if( i === j || (j === count - i + 1)){
+                str += "*";
+              }else{
+                str += " ";
+              }
+            }
+          
+          str += "/n";
+        }
+        return str;
+        `}
+      />
+
+      <CodeBlockComponent
+        header={"Left Triangle Star Pattern"}
+        logicfun={leftTrianglePattern}
         logic={`
         let num = 5;
         let str = "";
